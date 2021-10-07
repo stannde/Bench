@@ -1,4 +1,5 @@
 // Config pbjs Nice Matin
+// Ad units
 [
     {
         "code": "div-gpt-ad-banniere_haute",
@@ -946,9 +947,101 @@
         }
     }
 ]
-
+// get config
+{
+    "_debug": true,
+    "debug": true,
+    "_bidderTimeout": 3000,
+    "bidderTimeout": 3000,
+    "_publisherDomain": "https://www.nicematin.com",
+    "publisherDomain": "https://www.nicematin.com",
+    "_priceGranularity": "auto",
+    "priceGranularity": "auto",
+    "_customPriceBucket": {},
+    "customPriceBucket": {},
+    "_mediaTypePriceGranularity": {},
+    "mediaTypePriceGranularity": {},
+    "_sendAllBids": false,
+    "enableSendAllBids": false,
+    "_useBidCache": true,
+    "useBidCache": true,
+    "_deviceAccess": true,
+    "deviceAccess": true,
+    "_bidderSequence": "random",
+    "bidderSequence": "random",
+    "_timeoutBuffer": 400,
+    "timeoutBuffer": 400,
+    "_disableAjaxTimeout": true,
+    "disableAjaxTimeout": true,
+    "_maxNestedIframes": 10,
+    "maxNestedIframes": 10,
+    "_auctionOptions": {},
+    "auctionOptions": {},
+    "userSync": {
+        "syncEnabled": true,
+        "filterSettings": {
+            "all": {
+                "bidders": "*",
+                "filter": "include"
+            }
+        },
+        "syncsPerBidder": 10,
+        "syncDelay": 500,
+        "auctionDelay": 0
+    },
+    "consentManagement": {
+        "gdpr": {
+            "cmpApi": "iab",
+            "timeout": 8000,
+            "defaultGdprScope": true
+        }
+    },
+    "realTimeData": {
+        "auctionDelay": 300,
+        "dataProviders": [
+            {
+                "name": "adloox",
+                "waitForIt": true,
+                "params": {
+                    "thresholds": [
+                        50,
+                        60,
+                        70,
+                        80,
+                        90
+                    ],
+                    "slotinpath": true,
+                    "params": {
+                        "clientid": 553,
+                        "platformid": 216,
+                        "tagid": 1262
+                    }
+                }
+            }
+        ]
+    },
+    "currency": {
+        "adServerCurrency": "EUR",
+        "conversionRateFile": "https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json",
+        "granularityMultiplier": 1
+    },
+    "maxRequestsPerOrigin": 4,
+    "rubicon": {
+        "singleRequest": true
+    },
+    "ortb2": {
+        "site": {
+            "ext": {
+                "data": {
+                    "adl_ok": true
+                }
+            }
+        }
+    }
+}
 
 // Config pbjs Ouest France
+// Ad units
 [
     {
         "pubstack": {
@@ -1567,11 +1660,174 @@
         ]
     }
 ]
-
-
+// get config
+{
+    "_debug": false,
+    "debug": false,
+    "_bidderTimeout": 3000,
+    "bidderTimeout": 3000,
+    "_publisherDomain": "https://www.ouest-france.fr",
+    "publisherDomain": "https://www.ouest-france.fr",
+    "_priceGranularity": "custom",
+    "priceGranularity": "custom",
+    "_customPriceBucket": {
+        "buckets": [
+            {
+                "precision": 2,
+                "min": 0,
+                "max": 22,
+                "increment": 0.01
+            }
+        ]
+    },
+    "customPriceBucket": {
+        "buckets": [
+            {
+                "precision": 2,
+                "min": 0,
+                "max": 22,
+                "increment": 0.01
+            }
+        ]
+    },
+    "_mediaTypePriceGranularity": {},
+    "mediaTypePriceGranularity": {},
+    "_sendAllBids": false,
+    "enableSendAllBids": false,
+    "_useBidCache": false,
+    "useBidCache": false,
+    "_deviceAccess": true,
+    "deviceAccess": true,
+    "_bidderSequence": "random",
+    "bidderSequence": "random",
+    "_timeoutBuffer": 400,
+    "timeoutBuffer": 400,
+    "_disableAjaxTimeout": false,
+    "disableAjaxTimeout": false,
+    "_maxNestedIframes": 10,
+    "maxNestedIframes": 10,
+    "_auctionOptions": {},
+    "auctionOptions": {},
+    "userSync": {
+        "syncEnabled": true,
+        "filterSettings": {
+            "all": {
+                "bidders": "*",
+                "filter": "include"
+            }
+        },
+        "syncsPerBidder": 5,
+        "syncDelay": 3000,
+        "auctionDelay": 0,
+        "aliasSyncEnabled": true
+    },
+    "s2sConfig": {
+        "timeout": 1000,
+        "maxBids": 1,
+        "adapter": "prebidServer",
+        "adapterOptions": {},
+        "syncUrlModifier": {}
+    },
+    "currency": {
+        "adServerCurrency": "USD",
+        "defaultRates": {
+            "EUR": {
+                "USD": 1.1
+            }
+        }
+    },
+    "realTimeData": {
+        "auctionDelay": 100,
+        "dataProviders": [
+            {
+                "name": "adloox",
+                "waitForIt": false,
+                "params": {
+                    "params": {
+                        "clientid": 544,
+                        "platformid": 216,
+                        "tagid": 1253
+                    },
+                    "thresholds": [
+                        50,
+                        60,
+                        70,
+                        80,
+                        90
+                    ],
+                    "clientid": 544,
+                    "platformid": 216,
+                    "tagid": 1253
+                }
+            }
+        ]
+    },
+    "consentManagement": {
+        "cmpApi": "iab",
+        "timeout": 8000,
+        "defaultGdprScope": true,
+        "gdpr": {
+            "rules": [
+                {
+                    "purpose": "storage",
+                    "enforcePurpose": true,
+                    "enforceVendor": true,
+                    "vendorExceptions": [
+                        "appnexus",
+                        "appnexusAst",
+                        "appnexusAst_na",
+                        "gravity",
+                        "gravity_na",
+                        "asqmax",
+                        "asqmax_na",
+                        "asqclassic",
+                        "asqclassic_na",
+                        "asqbrand",
+                        "asqbrand_na",
+                        "proxistore",
+                        "adyoulike",
+                        "appnexus366",
+                        "appnexus366_na",
+                        "quantum_na",
+                        "quantum",
+                        "improvedigital_na",
+                        "smartadserver",
+                        "teads",
+                        "smart-prc",
+                        "improvedigital",
+                        "criteo",
+                        "ix",
+                        "triplelift",
+                        "rubicon",
+                        "rubicon-prc",
+                        "sublime",
+                        "openx",
+                        "adyoulike_na",
+                        "richaudience",
+                        "onemobile",
+                        "mediasquare",
+                        "mediasquare_na"
+                    ]
+                },
+                {
+                    "purpose": "basicAds",
+                    "enforcePurpose": false,
+                    "enforceVendor": false
+                }
+            ]
+        }
+    },
+    "improvedigital": {
+        "singleRequest": true,
+        "usePrebidSizes": true
+    },
+    "rubicon": {
+        "singleRequest": true
+    }
+}
 
 // Gala.fr
-
+// Ad units
 [
     {
         "bids": [
@@ -7560,8 +7816,11 @@
         }
     }
 ]
+// get config
+
 
 // Voici
+// Ad units
 [
     {
         "bids": [
@@ -9471,8 +9730,144 @@
         }
     }
 ]
+// get config
+{
+    "_debug": false,
+    "debug": false,
+    "_bidderTimeout": 2000,
+    "bidderTimeout": 2000,
+    "_publisherDomain": "https://www.voici.fr",
+    "publisherDomain": "https://www.voici.fr",
+    "_priceGranularity": "custom",
+    "priceGranularity": "custom",
+    "_customPriceBucket": {
+        "buckets": [
+            {
+                "max": 1,
+                "increment": 0.01,
+                "min": 0
+            },
+            {
+                "max": 3,
+                "increment": 0.02,
+                "min": 1
+            },
+            {
+                "max": 20,
+                "increment": 0.1
+            },
+            {
+                "max": 100,
+                "increment": 1
+            }
+        ]
+    },
+    "customPriceBucket": {
+        "buckets": [
+            {
+                "max": 1,
+                "increment": 0.01,
+                "min": 0
+            },
+            {
+                "max": 3,
+                "increment": 0.02,
+                "min": 1
+            },
+            {
+                "max": 20,
+                "increment": 0.1
+            },
+            {
+                "max": 100,
+                "increment": 1
+            }
+        ]
+    },
+    "_mediaTypePriceGranularity": {},
+    "mediaTypePriceGranularity": {},
+    "_sendAllBids": true,
+    "enableSendAllBids": true,
+    "_useBidCache": true,
+    "useBidCache": true,
+    "_deviceAccess": true,
+    "deviceAccess": true,
+    "_bidderSequence": "random",
+    "bidderSequence": "random",
+    "_timeoutBuffer": 400,
+    "timeoutBuffer": 400,
+    "_disableAjaxTimeout": false,
+    "disableAjaxTimeout": false,
+    "_maxNestedIframes": 10,
+    "maxNestedIframes": 10,
+    "_auctionOptions": {},
+    "auctionOptions": {},
+    "userSync": {
+        "syncEnabled": true,
+        "filterSettings": {
+            "all": {
+                "bidders": "*",
+                "filter": "include"
+            }
+        },
+        "syncsPerBidder": 5,
+        "syncDelay": 3000,
+        "auctionDelay": 50,
+        "userIds": [
+            {
+                "name": "id5Id",
+                "params": {
+                    "partner": 164,
+                    "pd": ""
+                },
+                "storage": {
+                    "type": "cookie",
+                    "name": "pbjs-id5id",
+                    "expires": 7,
+                    "refreshInSeconds": 28800
+                }
+            },
+            {
+                "name": "identityLink",
+                "params": {
+                    "pid": "98"
+                },
+                "storage": {
+                    "type": "cookie",
+                    "name": "idl_env",
+                    "expires": 7
+                }
+            },
+            {
+                "name": "pubProvidedId",
+                "params": {
+                    "eids": [
+                        {
+                            "source": "invibes.com",
+                            "uids": [
+                                {
+                                    "id": "",
+                                    "atype": 3,
+                                    "ext": {
+                                        "stype": "other"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "consentManagement": {
+        "consentTimeout": 3000,
+        "cmpApi": "iab",
+        "allowAuctionWithoutConsent": true
+    }
+}
 
 // Femme actuelle
+// Ad units
 [
     {
         "bids": [
@@ -12158,8 +12553,144 @@
         }
     }
 ]
+// get config
+{
+    "_debug": false,
+    "debug": false,
+    "_bidderTimeout": 2000,
+    "bidderTimeout": 2000,
+    "_publisherDomain": "https://www.femmeactuelle.fr",
+    "publisherDomain": "https://www.femmeactuelle.fr",
+    "_priceGranularity": "custom",
+    "priceGranularity": "custom",
+    "_customPriceBucket": {
+        "buckets": [
+            {
+                "max": 1,
+                "increment": 0.01,
+                "min": 0
+            },
+            {
+                "max": 3,
+                "increment": 0.02,
+                "min": 1
+            },
+            {
+                "max": 20,
+                "increment": 0.1
+            },
+            {
+                "max": 100,
+                "increment": 1
+            }
+        ]
+    },
+    "customPriceBucket": {
+        "buckets": [
+            {
+                "max": 1,
+                "increment": 0.01,
+                "min": 0
+            },
+            {
+                "max": 3,
+                "increment": 0.02,
+                "min": 1
+            },
+            {
+                "max": 20,
+                "increment": 0.1
+            },
+            {
+                "max": 100,
+                "increment": 1
+            }
+        ]
+    },
+    "_mediaTypePriceGranularity": {},
+    "mediaTypePriceGranularity": {},
+    "_sendAllBids": true,
+    "enableSendAllBids": true,
+    "_useBidCache": true,
+    "useBidCache": true,
+    "_deviceAccess": true,
+    "deviceAccess": true,
+    "_bidderSequence": "random",
+    "bidderSequence": "random",
+    "_timeoutBuffer": 400,
+    "timeoutBuffer": 400,
+    "_disableAjaxTimeout": false,
+    "disableAjaxTimeout": false,
+    "_maxNestedIframes": 10,
+    "maxNestedIframes": 10,
+    "_auctionOptions": {},
+    "auctionOptions": {},
+    "userSync": {
+        "syncEnabled": true,
+        "filterSettings": {
+            "all": {
+                "bidders": "*",
+                "filter": "include"
+            }
+        },
+        "syncsPerBidder": 5,
+        "syncDelay": 3000,
+        "auctionDelay": 50,
+        "userIds": [
+            {
+                "name": "id5Id",
+                "params": {
+                    "partner": 164,
+                    "pd": ""
+                },
+                "storage": {
+                    "type": "cookie",
+                    "name": "pbjs-id5id",
+                    "expires": 7,
+                    "refreshInSeconds": 28800
+                }
+            },
+            {
+                "name": "identityLink",
+                "params": {
+                    "pid": "98"
+                },
+                "storage": {
+                    "type": "cookie",
+                    "name": "idl_env",
+                    "expires": 7
+                }
+            },
+            {
+                "name": "pubProvidedId",
+                "params": {
+                    "eids": [
+                        {
+                            "source": "invibes.com",
+                            "uids": [
+                                {
+                                    "id": "",
+                                    "atype": 3,
+                                    "ext": {
+                                        "stype": "other"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "consentManagement": {
+        "consentTimeout": 3000,
+        "cmpApi": "iab",
+        "allowAuctionWithoutConsent": true
+    }
+}
 
 // Au féminin
+// Ad units
 [
     {
         "code": "pegasus_placeholder_300_atf",
@@ -12799,8 +13330,186 @@
         "bids": []
     }
 ]
+// get config
+{
+    "_debug": false,
+    "debug": false,
+    "_bidderTimeout": 3000,
+    "bidderTimeout": 3000,
+    "_publisherDomain": "aufeminin.com",
+    "publisherDomain": "aufeminin.com",
+    "_priceGranularity": "custom",
+    "priceGranularity": "custom",
+    "_customPriceBucket": {
+        "buckets": [
+            {
+                "max": 0.05,
+                "increment": 0.05,
+                "min": 0
+            },
+            {
+                "max": 8,
+                "increment": 0.01,
+                "min": 0.05
+            },
+            {
+                "max": 15,
+                "increment": 0.02
+            },
+            {
+                "max": 55,
+                "increment": 0.2
+            }
+        ]
+    },
+    "customPriceBucket": {
+        "buckets": [
+            {
+                "max": 0.05,
+                "increment": 0.05,
+                "min": 0
+            },
+            {
+                "max": 8,
+                "increment": 0.01,
+                "min": 0.05
+            },
+            {
+                "max": 15,
+                "increment": 0.02
+            },
+            {
+                "max": 55,
+                "increment": 0.2
+            }
+        ]
+    },
+    "_mediaTypePriceGranularity": {},
+    "mediaTypePriceGranularity": {},
+    "_sendAllBids": true,
+    "enableSendAllBids": true,
+    "_useBidCache": true,
+    "useBidCache": true,
+    "_deviceAccess": true,
+    "deviceAccess": true,
+    "_bidderSequence": "fixed",
+    "bidderSequence": "fixed",
+    "_timeoutBuffer": 400,
+    "timeoutBuffer": 400,
+    "_disableAjaxTimeout": false,
+    "disableAjaxTimeout": false,
+    "_maxNestedIframes": 10,
+    "maxNestedIframes": 10,
+    "_auctionOptions": {},
+    "auctionOptions": {},
+    "userSync": {
+        "syncEnabled": true,
+        "filterSettings": {
+            "all": {
+                "bidders": "*",
+                "filter": "include"
+            }
+        },
+        "syncsPerBidder": 5,
+        "syncDelay": 60000,
+        "auctionDelay": 0,
+        "enableOverride": true
+    },
+    "debugging": {
+        "enabled": false
+    },
+    "consentManagement": {
+        "gdpr": {
+            "cmpApi": "iab",
+            "timeout": 10000,
+            "defaultGdprScope": true
+        }
+    },
+    "rubicon": {
+        "singleRequest": true
+    },
+    "currency": {
+        "adServerCurrency": "EUR",
+        "defaultRates": {
+            "USD": {
+                "USD": 1,
+                "JPY": 111.34985271183506,
+                "BGN": 1.69450701784786,
+                "CZK": 22.01958066193034,
+                "DKK": 6.445849939351933,
+                "GBP": 0.7361809045226131,
+                "HUF": 311.4105007797609,
+                "PLN": 3.9789464564200316,
+                "RON": 4.28504591925143,
+                "SEK": 8.805059781666957,
+                "CHF": 0.9283486397504765,
+                "ISK": 128.74718419684632,
+                "NOK": 8.59729682897245,
+                "HRK": 6.504938485531104,
+                "RUB": 72.4520880263386,
+                "TRY": 8.906775255588288,
+                "AUD": 1.378703864148328,
+                "BRL": 5.508923929994801,
+                "CAD": 1.2627794143129443,
+                "CNY": 6.446629700225264,
+                "HKD": 7.786865361289205,
+                "IDR": 14285.002599202913,
+                "ILS": 3.2448449142263045,
+                "INR": 74.88996707676314,
+                "KRW": 1195.5553630220068,
+                "MXN": 20.762519494021834,
+                "MYR": 4.184456766591579,
+                "NZD": 1.4493155432334086,
+                "PHP": 50.947842661583785,
+                "SGD": 1.3612892046439093,
+                "THB": 33.890140356957204,
+                "ZAR": 15.123981978859817,
+                "EUR": 0.8664009703690869
+            },
+            "GBP": {
+                "USD": 1.358361774744027,
+                "JPY": 151.2533835471343,
+                "BGN": 2.3017535600800283,
+                "CZK": 29.91055666705896,
+                "DKK": 8.755796163351771,
+                "GBP": 1,
+                "HUF": 423.00812051312226,
+                "PLN": 5.404848770154172,
+                "RON": 5.820642579734024,
+                "SEK": 11.960456631752384,
+                "CHF": 1.2610333058726608,
+                "ISK": 174.8852536189243,
+                "NOK": 11.678239378604212,
+                "HRK": 8.836059785806755,
+                "RUB": 98.41614687536777,
+                "TRY": 12.098623043427093,
+                "AUD": 1.8727786277509708,
+                "BRL": 7.48311168647758,
+                "CAD": 1.715311286336354,
+                "CNY": 8.756855360715546,
+                "HKD": 10.577380251853596,
+                "IDR": 19404.20148287631,
+                "ILS": 4.407673296457573,
+                "INR": 101.72766858891373,
+                "KRW": 1623.9967047193127,
+                "MXN": 28.20301282805696,
+                "MYR": 5.68400611980699,
+                "NZD": 1.9686948334706367,
+                "PHP": 69.20560197716841,
+                "SGD": 1.8491232199599859,
+                "THB": 46.035071201600566,
+                "ZAR": 20.543839002000706,
+                "EUR": 1.1768859597505001
+            }
+        }
+    },
+    "floors": {
+        "additionalSchemaFields": {}
+    }
+}
 
 // Marmiton
+// Ad units
 [
     {
         "code": "pegasus_placeholder_banner_atf",
@@ -13037,8 +13746,184 @@
         "bids": []
     }
 ]
+// get config
+{
+    "_debug": false,
+    "debug": false,
+    "_bidderTimeout": 3000,
+    "bidderTimeout": 3000,
+    "_publisherDomain": "www.marmiton.org",
+    "publisherDomain": "www.marmiton.org",
+    "_priceGranularity": "custom",
+    "priceGranularity": "custom",
+    "_customPriceBucket": {
+        "buckets": [
+            {
+                "max": 0.05,
+                "increment": 0.05,
+                "min": 0
+            },
+            {
+                "max": 8,
+                "increment": 0.01
+            },
+            {
+                "max": 15,
+                "increment": 0.02
+            },
+            {
+                "max": 55,
+                "increment": 0.2
+            }
+        ]
+    },
+    "customPriceBucket": {
+        "buckets": [
+            {
+                "max": 0.05,
+                "increment": 0.05,
+                "min": 0
+            },
+            {
+                "max": 8,
+                "increment": 0.01
+            },
+            {
+                "max": 15,
+                "increment": 0.02
+            },
+            {
+                "max": 55,
+                "increment": 0.2
+            }
+        ]
+    },
+    "_mediaTypePriceGranularity": {},
+    "mediaTypePriceGranularity": {},
+    "_sendAllBids": true,
+    "enableSendAllBids": true,
+    "_useBidCache": true,
+    "useBidCache": true,
+    "_deviceAccess": true,
+    "deviceAccess": true,
+    "_bidderSequence": "fixed",
+    "bidderSequence": "fixed",
+    "_timeoutBuffer": 400,
+    "timeoutBuffer": 400,
+    "_disableAjaxTimeout": false,
+    "disableAjaxTimeout": false,
+    "_maxNestedIframes": 10,
+    "maxNestedIframes": 10,
+    "_auctionOptions": {},
+    "auctionOptions": {},
+    "userSync": {
+        "syncEnabled": true,
+        "filterSettings": {
+            "all": {
+                "bidders": "*",
+                "filter": "include"
+            }
+        },
+        "syncsPerBidder": 5,
+        "syncDelay": 60000,
+        "auctionDelay": 0,
+        "enableOverride": true
+    },
+    "debugging": {
+        "enabled": false
+    },
+    "consentManagement": {
+        "gdpr": {
+            "cmpApi": "iab",
+            "timeout": 10000,
+            "defaultGdprScope": true
+        }
+    },
+    "rubicon": {
+        "singleRequest": true
+    },
+    "currency": {
+        "adServerCurrency": "EUR",
+        "defaultRates": {
+            "USD": {
+                "USD": 1,
+                "JPY": 111.34985271183506,
+                "BGN": 1.69450701784786,
+                "CZK": 22.01958066193034,
+                "DKK": 6.445849939351933,
+                "GBP": 0.7361809045226131,
+                "HUF": 311.4105007797609,
+                "PLN": 3.9789464564200316,
+                "RON": 4.28504591925143,
+                "SEK": 8.805059781666957,
+                "CHF": 0.9283486397504765,
+                "ISK": 128.74718419684632,
+                "NOK": 8.59729682897245,
+                "HRK": 6.504938485531104,
+                "RUB": 72.4520880263386,
+                "TRY": 8.906775255588288,
+                "AUD": 1.378703864148328,
+                "BRL": 5.508923929994801,
+                "CAD": 1.2627794143129443,
+                "CNY": 6.446629700225264,
+                "HKD": 7.786865361289205,
+                "IDR": 14285.002599202913,
+                "ILS": 3.2448449142263045,
+                "INR": 74.88996707676314,
+                "KRW": 1195.5553630220068,
+                "MXN": 20.762519494021834,
+                "MYR": 4.184456766591579,
+                "NZD": 1.4493155432334086,
+                "PHP": 50.947842661583785,
+                "SGD": 1.3612892046439093,
+                "THB": 33.890140356957204,
+                "ZAR": 15.123981978859817,
+                "EUR": 0.8664009703690869
+            },
+            "GBP": {
+                "USD": 1.358361774744027,
+                "JPY": 151.2533835471343,
+                "BGN": 2.3017535600800283,
+                "CZK": 29.91055666705896,
+                "DKK": 8.755796163351771,
+                "GBP": 1,
+                "HUF": 423.00812051312226,
+                "PLN": 5.404848770154172,
+                "RON": 5.820642579734024,
+                "SEK": 11.960456631752384,
+                "CHF": 1.2610333058726608,
+                "ISK": 174.8852536189243,
+                "NOK": 11.678239378604212,
+                "HRK": 8.836059785806755,
+                "RUB": 98.41614687536777,
+                "TRY": 12.098623043427093,
+                "AUD": 1.8727786277509708,
+                "BRL": 7.48311168647758,
+                "CAD": 1.715311286336354,
+                "CNY": 8.756855360715546,
+                "HKD": 10.577380251853596,
+                "IDR": 19404.20148287631,
+                "ILS": 4.407673296457573,
+                "INR": 101.72766858891373,
+                "KRW": 1623.9967047193127,
+                "MXN": 28.20301282805696,
+                "MYR": 5.68400611980699,
+                "NZD": 1.9686948334706367,
+                "PHP": 69.20560197716841,
+                "SGD": 1.8491232199599859,
+                "THB": 46.035071201600566,
+                "ZAR": 20.543839002000706,
+                "EUR": 1.1768859597505001
+            }
+        }
+    },
+    "floors": {
+        "additionalSchemaFields": {}
+    }
+}
 
 // Doctissimo
+// Ad units
 [
     {
         "code": "pegasus_placeholder_banner_atf",
@@ -13769,8 +14654,186 @@
         ]
     }
 ]
+// get config
+{
+    "_debug": false,
+    "debug": false,
+    "_bidderTimeout": 3000,
+    "bidderTimeout": 3000,
+    "_publisherDomain": "www.doctissimo.fr",
+    "publisherDomain": "www.doctissimo.fr",
+    "_priceGranularity": "custom",
+    "priceGranularity": "custom",
+    "_customPriceBucket": {
+        "buckets": [
+            {
+                "max": 0.05,
+                "increment": 0.05
+            },
+            {
+                "max": 8,
+                "increment": 0.01
+            },
+            {
+                "max": 15,
+                "increment": 0.02
+            },
+            {
+                "max": 55,
+                "increment": 0.2
+            }
+        ]
+    },
+    "customPriceBucket": {
+        "buckets": [
+            {
+                "max": 0.05,
+                "increment": 0.05
+            },
+            {
+                "max": 8,
+                "increment": 0.01
+            },
+            {
+                "max": 15,
+                "increment": 0.02
+            },
+            {
+                "max": 55,
+                "increment": 0.2
+            }
+        ]
+    },
+    "_mediaTypePriceGranularity": {},
+    "mediaTypePriceGranularity": {},
+    "_sendAllBids": true,
+    "enableSendAllBids": true,
+    "_useBidCache": true,
+    "useBidCache": true,
+    "_deviceAccess": true,
+    "deviceAccess": true,
+    "_bidderSequence": "fixed",
+    "bidderSequence": "fixed",
+    "_timeoutBuffer": 400,
+    "timeoutBuffer": 400,
+    "_disableAjaxTimeout": false,
+    "disableAjaxTimeout": false,
+    "_maxNestedIframes": 10,
+    "maxNestedIframes": 10,
+    "_auctionOptions": {},
+    "auctionOptions": {},
+    "userSync": {
+        "syncEnabled": true,
+        "filterSettings": {
+            "image": {
+                "bidders": "*",
+                "filter": "include"
+            },
+            "iframe": {
+                "bidders": "*",
+                "filter": "exclude"
+            }
+        },
+        "syncsPerBidder": 5,
+        "syncDelay": 60000,
+        "auctionDelay": 0,
+        "enableOverride": true
+    },
+    "debugging": {
+        "enabled": false
+    },
+    "consentManagement": {
+        "gdpr": {
+            "cmpApi": "iab",
+            "timeout": 10000,
+            "defaultGdprScope": true
+        }
+    },
+    "rubicon": {
+        "singleRequest": true
+    },
+    "currency": {
+        "adServerCurrency": "EUR",
+        "defaultRates": {
+            "USD": {
+                "USD": 1,
+                "JPY": 111.34985271183506,
+                "BGN": 1.69450701784786,
+                "CZK": 22.01958066193034,
+                "DKK": 6.445849939351933,
+                "GBP": 0.7361809045226131,
+                "HUF": 311.4105007797609,
+                "PLN": 3.9789464564200316,
+                "RON": 4.28504591925143,
+                "SEK": 8.805059781666957,
+                "CHF": 0.9283486397504765,
+                "ISK": 128.74718419684632,
+                "NOK": 8.59729682897245,
+                "HRK": 6.504938485531104,
+                "RUB": 72.4520880263386,
+                "TRY": 8.906775255588288,
+                "AUD": 1.378703864148328,
+                "BRL": 5.508923929994801,
+                "CAD": 1.2627794143129443,
+                "CNY": 6.446629700225264,
+                "HKD": 7.786865361289205,
+                "IDR": 14285.002599202913,
+                "ILS": 3.2448449142263045,
+                "INR": 74.88996707676314,
+                "KRW": 1195.5553630220068,
+                "MXN": 20.762519494021834,
+                "MYR": 4.184456766591579,
+                "NZD": 1.4493155432334086,
+                "PHP": 50.947842661583785,
+                "SGD": 1.3612892046439093,
+                "THB": 33.890140356957204,
+                "ZAR": 15.123981978859817,
+                "EUR": 0.8664009703690869
+            },
+            "GBP": {
+                "USD": 1.358361774744027,
+                "JPY": 151.2533835471343,
+                "BGN": 2.3017535600800283,
+                "CZK": 29.91055666705896,
+                "DKK": 8.755796163351771,
+                "GBP": 1,
+                "HUF": 423.00812051312226,
+                "PLN": 5.404848770154172,
+                "RON": 5.820642579734024,
+                "SEK": 11.960456631752384,
+                "CHF": 1.2610333058726608,
+                "ISK": 174.8852536189243,
+                "NOK": 11.678239378604212,
+                "HRK": 8.836059785806755,
+                "RUB": 98.41614687536777,
+                "TRY": 12.098623043427093,
+                "AUD": 1.8727786277509708,
+                "BRL": 7.48311168647758,
+                "CAD": 1.715311286336354,
+                "CNY": 8.756855360715546,
+                "HKD": 10.577380251853596,
+                "IDR": 19404.20148287631,
+                "ILS": 4.407673296457573,
+                "INR": 101.72766858891373,
+                "KRW": 1623.9967047193127,
+                "MXN": 28.20301282805696,
+                "MYR": 5.68400611980699,
+                "NZD": 1.9686948334706367,
+                "PHP": 69.20560197716841,
+                "SGD": 1.8491232199599859,
+                "THB": 46.035071201600566,
+                "ZAR": 20.543839002000706,
+                "EUR": 1.1768859597505001
+            }
+        }
+    },
+    "floors": {
+        "additionalSchemaFields": {}
+    }
+}
 
 // Grazia
+// Ad units
 [
     {
         "code": "position-1",
@@ -17703,8 +18766,110 @@
         ]
     }
 ]
+// get config
+{
+    "_debug": false,
+    "debug": false,
+    "_bidderTimeout": 3000,
+    "bidderTimeout": 3000,
+    "_publisherDomain": "https://www.grazia.fr",
+    "publisherDomain": "https://www.grazia.fr",
+    "_priceGranularity": "dense",
+    "priceGranularity": "dense",
+    "_customPriceBucket": {},
+    "customPriceBucket": {},
+    "_mediaTypePriceGranularity": {},
+    "mediaTypePriceGranularity": {},
+    "_sendAllBids": true,
+    "enableSendAllBids": true,
+    "_useBidCache": false,
+    "useBidCache": false,
+    "_deviceAccess": true,
+    "deviceAccess": true,
+    "_bidderSequence": "random",
+    "bidderSequence": "random",
+    "_timeoutBuffer": 400,
+    "timeoutBuffer": 400,
+    "_disableAjaxTimeout": false,
+    "disableAjaxTimeout": false,
+    "_maxNestedIframes": 10,
+    "maxNestedIframes": 10,
+    "_auctionOptions": {},
+    "auctionOptions": {},
+    "userSync": {
+        "syncEnabled": true,
+        "filterSettings": {
+            "iframe": {
+                "bidders": [
+                    "smilewanted"
+                ],
+                "filter": "include"
+            },
+            "image": {
+                "bidders": "*",
+                "filter": "include"
+            }
+        },
+        "syncsPerBidder": 5,
+        "syncDelay": 3000,
+        "auctionDelay": 50,
+        "iframeEnabled": true,
+        "userIds": [
+            {
+                "name": "id5Id",
+                "params": {
+                    "partner": 409
+                },
+                "storage": {
+                    "type": "cookie",
+                    "name": "pbjs-id5id",
+                    "expires": 90,
+                    "refreshInSeconds": 28800
+                }
+            }
+        ]
+    },
+    "s2sConfig": {
+        "timeout": 1000,
+        "maxBids": 1,
+        "adapter": "prebidServer",
+        "adapterOptions": {},
+        "syncUrlModifier": {}
+    },
+    "floors": {
+        "enforcement": {
+            "floorDeals": false,
+            "enforceJS": true,
+            "bidAdjustment": true
+        },
+        "auctionDelay": 200,
+        "endpoint": {
+            "url": "https://ads.rubiconproject.com/floors/18570-pbjs-floors.json"
+        }
+    },
+    "consentManagement": {
+        "gdpr": {
+            "cmpApi": "iab",
+            "timeout": 8000,
+            "defaultGdprScope": true
+        }
+    },
+    "cache": {
+        "url": "https://prebid.adnxs.com/pbc/v1/cache"
+    },
+    "currency": {
+        "adServerCurrency": "EUR",
+        "granularityMultiplier": 1,
+        "rates": {
+            "USD": {
+                "EUR": 0.85
+            }
+        }
+    }
+}
 
 // Marie France
+// Ad units
 [
     {
         "code": "position-1",
@@ -19611,8 +20776,11 @@
         ]
     }
 ]
+// get config
+
 
 // Topsanté
+// Ad units
 [
     {
         "code": "position-1",
@@ -23791,8 +24959,110 @@
         ]
     }
 ]
+// get config
+{
+    "_debug": false,
+    "debug": false,
+    "_bidderTimeout": 3000,
+    "bidderTimeout": 3000,
+    "_publisherDomain": "https://www.topsante.com",
+    "publisherDomain": "https://www.topsante.com",
+    "_priceGranularity": "dense",
+    "priceGranularity": "dense",
+    "_customPriceBucket": {},
+    "customPriceBucket": {},
+    "_mediaTypePriceGranularity": {},
+    "mediaTypePriceGranularity": {},
+    "_sendAllBids": true,
+    "enableSendAllBids": true,
+    "_useBidCache": false,
+    "useBidCache": false,
+    "_deviceAccess": true,
+    "deviceAccess": true,
+    "_bidderSequence": "random",
+    "bidderSequence": "random",
+    "_timeoutBuffer": 400,
+    "timeoutBuffer": 400,
+    "_disableAjaxTimeout": false,
+    "disableAjaxTimeout": false,
+    "_maxNestedIframes": 10,
+    "maxNestedIframes": 10,
+    "_auctionOptions": {},
+    "auctionOptions": {},
+    "userSync": {
+        "syncEnabled": true,
+        "filterSettings": {
+            "iframe": {
+                "bidders": [
+                    "smilewanted"
+                ],
+                "filter": "include"
+            },
+            "image": {
+                "bidders": "*",
+                "filter": "include"
+            }
+        },
+        "syncsPerBidder": 5,
+        "syncDelay": 3000,
+        "auctionDelay": 50,
+        "iframeEnabled": true,
+        "userIds": [
+            {
+                "name": "id5Id",
+                "params": {
+                    "partner": 409
+                },
+                "storage": {
+                    "type": "cookie",
+                    "name": "pbjs-id5id",
+                    "expires": 90,
+                    "refreshInSeconds": 28800
+                }
+            }
+        ]
+    },
+    "s2sConfig": {
+        "timeout": 1000,
+        "maxBids": 1,
+        "adapter": "prebidServer",
+        "adapterOptions": {},
+        "syncUrlModifier": {}
+    },
+    "floors": {
+        "enforcement": {
+            "floorDeals": false,
+            "enforceJS": true,
+            "bidAdjustment": true
+        },
+        "auctionDelay": 200,
+        "endpoint": {
+            "url": "https://ads.rubiconproject.com/floors/18570-pbjs-floors.json"
+        }
+    },
+    "consentManagement": {
+        "gdpr": {
+            "cmpApi": "iab",
+            "timeout": 8000,
+            "defaultGdprScope": true
+        }
+    },
+    "cache": {
+        "url": "https://prebid.adnxs.com/pbc/v1/cache"
+    },
+    "currency": {
+        "adServerCurrency": "EUR",
+        "granularityMultiplier": 1,
+        "rates": {
+            "USD": {
+                "EUR": 0.85
+            }
+        }
+    }
+}
 
 // Closer
+// Ad units
 [
     {
         "code": "browsi_adContainer_ai_507_ati_1_rc_0",
@@ -25352,3 +26622,58 @@
         ]
     }
 ]
+// get config
+{
+    "_debug": false,
+    "debug": false,
+    "_bidderTimeout": 3000,
+    "bidderTimeout": 3000,
+    "_publisherDomain": "https://www.closermag.fr",
+    "publisherDomain": "https://www.closermag.fr",
+    "_priceGranularity": "dense",
+    "priceGranularity": "dense",
+    "_customPriceBucket": {},
+    "customPriceBucket": {},
+    "_mediaTypePriceGranularity": {},
+    "mediaTypePriceGranularity": {},
+    "_sendAllBids": true,
+    "enableSendAllBids": true,
+    "_useBidCache": false,
+    "useBidCache": false,
+    "_deviceAccess": true,
+    "deviceAccess": true,
+    "_bidderSequence": "random",
+    "bidderSequence": "random",
+    "_timeoutBuffer": 400,
+    "timeoutBuffer": 400,
+    "_disableAjaxTimeout": false,
+    "disableAjaxTimeout": false,
+    "userSync": {
+        "syncEnabled": true,
+        "filterSettings": {
+            "image": {
+                "bidders": "*",
+                "filter": "include"
+            }
+        },
+        "syncsPerBidder": 5,
+        "syncDelay": 3000,
+        "auctionDelay": 0
+    },
+    "currency": {
+        "adServerCurrency": "EUR",
+        "granularityMultiplier": 1,
+        "rates": {
+            "USD": {
+                "EUR": 0.91
+            }
+        }
+    },
+    "consentManagement": {
+        "gdpr": {
+            "cmpApi": "iab",
+            "allowAuctionWithoutConsent": true,
+            "timeout": 1000
+        }
+    }
+}
